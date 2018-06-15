@@ -5,10 +5,13 @@ class DemoController < ApplicationController
   def index
     # render(:template => 'demo/index')
     # render('demo/index')
+    @array = [1,2,3,4,5]
     render('index')
   end
 
   def hello
+    @page = params['page']
+    @id = params[:id] # works the same
     render('hello')
   end
 

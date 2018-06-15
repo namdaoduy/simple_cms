@@ -1,1 +1,19 @@
 <h1>Hello world from index!</h1>
+
+<a href="/demo/hello">Hello</a><br/>
+<!-- same here -->
+<%= link_to('Hello two', {:action => 'hello'}) %><br/>
+<!-- <%= link_to('Hello two', {:controller => 'demo', :action => 'hello'}) %><br/> -->
+<!-- Only need controller when changing controller -->
+
+<%= link_to('Hello with param', {:action => 'hello', :page => 3, :id => 20}) %><br/>
+<!-- Go to: http://localhost:3000/demo/hello?id=20&page=3 -->
+
+<%= 1 + 6 %><br/>
+
+<% target = "world" %>
+<%= "Hello #{target}" %><br/>
+
+<% @array.each do |n| %>
+  <%= n %><br/>
+<% end %>

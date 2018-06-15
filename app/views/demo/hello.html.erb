@@ -1,1 +1,10 @@
 <h1>Hello world from hello!</h1>
+<%= link_to('Index page', {:action => 'index'}) %><br/>
+
+ID: <%= @id %><br />
+<!-- Works the same -->
+ID: <%= params[:id] %><br />
+PAGE: <%= @page %><br />
+<!-- @page + 1 ERROR because params always STRING -->
+<!-- Solution: use to_i to parse integer -->
+NEXT PAGE: <%= @page.to_i + 1 %><br />
